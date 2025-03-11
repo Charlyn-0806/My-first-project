@@ -1,0 +1,238 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.7)), url(images/courses/pink.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: #333;
+}
+
+/* Logo */
+.logo {
+	display: flex;
+	justify-content: center;
+}
+
+.logo img {
+	width: 100px;
+}
+
+/* Form Box */
+.form-box {
+	width: 400px;
+	position: relative;
+	background: rgba(255, 255, 255, 0.9);
+	padding: 100px;
+	border-radius: 10px;
+	box-shadow: 0px 4px 15px rgba(223, 127, 127, 0.3);
+	text-align: center;
+	animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Toggle Button */
+.button-box {
+    display: flex;
+    position: relative;
+    width: 240px;
+    margin: 20px auto;
+    background: #ddd;
+    border-radius: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Toggle Background */
+#btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #FA4B37, #DF2771);
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+/* Toggle Buttons */
+.toggle-btn {
+    width: 50%;
+    padding: 12px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    z-index: 2; /* Ensures text is visible above */
+    transition: 0.3s;
+}
+
+/* Active Button */
+.active-btn {
+    color: white !important;
+}
+
+/* Hover Effect */
+.toggle-btn:hover {
+	color: #FA4B37;
+}
+
+#btn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to right, #FA4B37, #DF2771);
+	border-radius: 30px;
+	transition: 0.4s;
+}
+
+/* Social Icons */
+.social-icons {
+	margin: 20px auto;
+	text-align: center;
+}
+
+.social-icons img {
+	width: 30px;
+	margin: 0 10px;
+	cursor: pointer;
+	opacity: 0.85;
+	transition: 0.3s;
+}
+
+.social-icons img:hover {
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+/* Input Fields */
+.input-group {
+	display: none;
+	width: 100%;
+	transition: 0.5s;
+}
+
+.input-group.active {
+	display: block;
+}
+
+.input-field {
+	width: 100%;
+	padding: 12px;
+	margin: 10px 0;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 8px;
+	outline: none;
+	background: rgba(255,255,255,0.6);
+	font-size: 16px;
+	transition: 0.3s;
+}
+
+.input-field:focus {
+	border: 1px solid #FA4B37;
+	background: rgba(255,255,255,0.9);
+	box-shadow: 0px 0px 8px rgba(250, 75, 55, 0.5);
+}
+
+/* Placeholder Text */
+::placeholder {
+	color: rgba(0,0,0,0.6);
+}
+
+/* Submit Button */
+.submit-btn {
+	width: 100%;
+	padding: 14px;
+	margin-top: 10px;
+	cursor: pointer;
+	background: linear-gradient(to right, #FA4B37, #DF2771);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	transition: 0.3s;
+}
+
+.submit-btn:hover {
+	background: linear-gradient(to right, #DF2771, #FA4B37);
+	transform: scale(1.03);
+}
+
+/* Register Button */
+.reg-btn {
+	background: gray;
+	transition: 0.3s;
+}
+
+.reg-btn:hover {
+	background: darkgray;
+}
+
+/* Checkbox */
+.check-box {
+	cursor: pointer;
+	margin: 10px 0;
+}
+
+/* Login & Register Forms */
+#login {
+	display: block;
+}
+
+#register {
+	display: none;
+}
+
+/* Success & Error Messages */
+#message {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+/* Auto-hide Messages After a Few Seconds */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 3s forwards;
+}
